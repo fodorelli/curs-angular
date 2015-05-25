@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Curs angular</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+</head>
+<body ng-app="MyApp">
+    <div ng-controller="MyCtrl" class="container">
+        <br />
+        <h3>Nested $http calls Test</h3>
+        <button ng-click="nestedTest()">Nested $http calls Test</button>
+        <p>Combined result: {{combinedNestedResult}}</p>
+        <br />
+        <br />
+        <h3>$q.all Test</h3>
+        <button ng-click="allTest()">$q.all() test</button>
+        <p>Combined result: {{combinedResult}}</p>
+        <br />
+        <br />
+        <h3>Deferred Time Test</h3>
+        <input type="checkbox" ng-model="success" ng-checked="success" /> Toggle Success/failure
+        <button ng-click="startDeferredTimer(success)">Start test</button>
+        <p>1 sec Timer Result: {{deferredTimerResult}}</p>
+    </div>
+
+
+    <!-- *********************************************************************************** -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
