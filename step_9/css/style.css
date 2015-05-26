@@ -1,0 +1,23 @@
+input {
+	outline: none;
+}
+input.ng-invalid.ng-dirty {
+	border: 1px solid crimson;
+}
+input.ng-valid.ng-dirty {
+	border: 1px solid green;
+}
+
+.pagination ul, .pagination {
+	list-style: none;
+	width: 100%;
+	display: inline-block;
+	padding-left: 0;
+}
+
+ul li:first-child {
+	float: left;
+}
+ul li:last-child {
+	float: right;
+}

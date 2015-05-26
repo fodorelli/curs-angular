@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Paginating Through Client-Side Data</title>
+    <title>Paginating Using Infinite Results</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -34,19 +34,7 @@
                 </tbody>
                 <tfoot>
                     <td colspan="3">
-                        <div class="pagination">
-                            <ul>
-                                <li ng-class="prevPageDisabled()">
-                                    <a href ng-click="prevPage()">« Prev</a>
-                                </li>
-                                <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
-                                    <a href="#">{{n+1}}</a>
-                                </li>
-                                <li ng-class="nextPageDisabled()">
-                                    <a href ng-click="nextPage()">Next »</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <button class="btn" href="#" ng-class="nextPageDisabledClass()" ng-click="loadMore()">Load more</button>
                     </td>
                 </tfoot>
             </table>
